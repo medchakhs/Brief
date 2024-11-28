@@ -15,54 +15,62 @@
       <form id="form" class="frome">
         <h1 class="text"> Form de 11 joueurs </h1>
           <label class="labl">Name</label>
-          <input class="inpt" type="text" placeholder="Enter name">
+          <input class="inpt" id="name" type="text" placeholder="Enter name">
 
           <label class="labl">Photo</label>
-          <input class="inpt" type="text" placeholder="Photo URL">
+          <input class="inpt" id="imge" type="text" placeholder="Photo URL">
 
           <label class="labl">Position</label>
           <select id="pet-select" class="optio">
             <option value="">--e poste de joueurs</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="ST">ST</option>
+            <option value="LW">LW</option>
+            <option value="RW">RW</option>
+            <option value="CM1">CM1</option>
+            <option value="CM2">CM2</option>
+            <option value="CM3">CM3</option>
+            <option value="LB">LB</option>
+            <option value="RB">RB</option>
+            <option value="CB1">CB1</option>
+            <option value="CB2">CB2</option>
+            <option value="GK">GK</option>
           </select>
-        
+         <div class="joeurs-statistique">
+
           <label class="labl">Rating</label>
-          <input class="inpt" type="number" min="30" max="100" placeholder="30-100">
+          <input class="inpt" id="raete" type="number" min="30" max="100" placeholder="30-100">
 
           <div class="nmbr">
               <div style="width: 150px; display: flex; flex-direction: column;">
                   <label class="lable">Pace</label>
-                  <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                  <input class="inpte" id="pace" type="number" min="30" max="100" placeholder="30-100">
               </div>
               <div style="width: 150px; display: flex; flex-direction: column;">
                   <label class="lable">Shooting</label>
-                  <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                  <input class="inpte" id="Shooting" type="number" min="30" max="100" placeholder="30-100">
               </div>
               <div style="width: 150px; display: flex; flex-direction: column;">
                 <label class="lable">Passing</label>
-                <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                <input class="inpte" id="Passing" type="number" min="30" max="100" placeholder="30-100">
             </div>
           </div>
           <div class="nmbr">
               <div style="width: 150px; display: flex; flex-direction: column;">
                   <label class="lable">Dribbling</label>
-                  <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                  <input class="inpte" id="Dribbling" type="number" min="30" max="100" placeholder="30-100">
               </div>
               <div style="width: 150px; display: flex; flex-direction: column;">
                   <label class="lable">Defending</label>
-                  <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                  <input class="inpte" id="Defending" type="number" min="30" max="100" placeholder="30-100">
               </div>
               <div style="width: 150px; display: flex; flex-direction: column;">
                 <label class="lable">Physical</label>
-                <input class="inpte" type="number" min="30" max="100" placeholder="30-100">
+                <input class="inpte" id="Physical" type="number" min="30" max="100" placeholder="30-100">
               </div>
           </div>
-          <button type="button" class="btn">Ajouter</button>
+
+        </div>
+          <button type="button" onclick="ajout()" class="btn">Ajouter</button>
       </form>
       <div style="position: relative;">
         <svg width="892" height="725" viewBox="0 0 904 650" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,20 +86,393 @@
         </svg>
         <div class="players-container">
             <div class="player">
-                <div class="gold" ></div>
-                <div class="gold" ></div>
-                <div class="gold" ></div>
+                <div class="gold" id="LW">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>LW</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gold" id="ST" >
+                    <div class="messi">
+                        <img >
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>ST</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gold" id="RW" >
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>RW</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="playere" id="pla1">
-                <div class="gold" ></div>
-                <div class="gold" ></div>
-                <div class="gold" ></div>
+                <div class="gold" id="CM1" >
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>CM</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gold" id="CM2">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>CM</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gold" id="CM3">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>CM</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="playere" id="pla2">
-                <div class="gold" ></div>
-                <div class="gold" ></div>
-                <div class="gold" ></div>
-                <div class="gold" ></div>
+                <div class="gold" id="LB">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>LB</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gold" id="CB1">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>CB</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="gold" id="CB2">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>CB</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="gold" id="RB">
+                    <div class="messi">
+                        <img>
+                    </div>
+                    <div class="right">
+                        <p>--</p>
+                        <p>RB</p>
+                    </div>
+                    <div class="nom">
+                        <p>-----</p>
+                    </div>
+                    <div class="statistique">
+                        <div class="sta">
+                            <p>PAC</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>SHO</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PAS</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DRI</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>DEF</p>
+                            <p>--</p>
+                        </div>
+                        <div class="sta">
+                            <p>PHY</p>
+                            <p>--</p>
+                        </div>
+                    </div>
+          
+                </div>
             </div>
             <div class="playere" id="pla3">
                 <div class="gold" ></div>
@@ -102,5 +483,6 @@
   </section>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
