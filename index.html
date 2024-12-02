@@ -9,7 +9,7 @@
 </head>
 <body>
    <header>
-    <button onclick="namee() " type="button" class="addd"> Add </button>
+    <button onclick="buttonAdd()" type="button" class="addd"> Add </button>
    </header>
   <section class="containte">
 
@@ -122,7 +122,7 @@
         </svg>
         <div class="players-container">
             <div class="player">
-                <div class="gold" id="LW">
+                <div class="gold LW">
                     <div class="messi">
                         <img>
                     </div>
@@ -160,13 +160,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('LW')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="ST" >
+                <div class="gold ST">
                     <div class="messi">
                         <img>
                     </div>
@@ -204,13 +204,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('ST')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
-                        <i onclick="suprrimer('ST')" class="fa fa-trash"  aria-hidden="true"></i>
+                        <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="RW" >
+                <div class="gold RW" >
                     <div class="messi">
                         <img>
                     </div>
@@ -248,7 +248,7 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('RW')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
@@ -256,7 +256,7 @@
                 </div>
             </div>
             <div class="playere" id="pla1">
-                <div class="gold" id="CM1" >
+                <div class="gold CM1" >
                     <div class="messi">
                         <img>
                     </div>
@@ -294,13 +294,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('CM1')" class="fa fa-pencil" aria-hidden="true"></i>                    
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="CM2">
+                <div class="gold CM2">
                     <div class="messi">
                         <img>
                     </div>
@@ -338,13 +338,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('CM2')" class="fa fa-pencil" aria-hidden="true"></i>                    
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="CM3">
+                <div class="gold CM3">
                     <div class="messi">
                         <img>
                     </div>
@@ -382,7 +382,7 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('CM3')" class="fa fa-pencil" aria-hidden="true"></i>                    
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
@@ -390,7 +390,7 @@
                 </div>
             </div>
             <div class="playere" id="pla2">
-                <div class="gold" id="LB">
+                <div class="gold LB">
                     <div class="messi">
                         <img>
                     </div>
@@ -428,13 +428,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('LB')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="CB1">
+                <div class="gold CB1">
                     <div class="messi">
                         <img>
                     </div>
@@ -472,13 +472,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('CB1')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="CB2">
+                <div class="gold CB2">
                     <div class="messi">
                         <img>
                     </div>
@@ -516,13 +516,13 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('CB2')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="gold" id="RB">
+                <div class="gold RB">
                     <div class="messi">
                         <img>
                     </div>
@@ -560,7 +560,7 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('RB')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
@@ -568,7 +568,7 @@
                 </div>
             </div>
             <div class="playere" id="pla3">
-                <div class="gold" id="GK">
+                <div class="gold GK">
                     <div class="messi">
                         <img>
                     </div>
@@ -606,7 +606,7 @@
                         </div>
                     </div>
                     <div class="modif">
-                        <i onclick="Mymodifier('GK')" class="fa fa-pencil" aria-hidden="true"></i>
+                        <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                     <div class="supprime">
                         <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
@@ -615,8 +615,281 @@
             </div>
         </div>
       </div>
-      
   </section>
+
+
+  <section style="display: flex; justify-content: center">
+    <!-- <h1> Changement</h1> -->
+    <div class="gold LW">
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>LW</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="gold ST" >
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>ST</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="gold RW">
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>RW</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="gold CM1">
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>CM</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="gold CM2">
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>CM</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="gold CM3">
+        <div class="messi">
+            <img>
+        </div>
+        <div class="right">
+            <p>--</p>
+            <p>CM</p>
+        </div>
+        <div class="nom">
+            <p>-----</p>
+        </div>
+        <div class="statistique">
+            <div class="sta">
+                <p>PAC</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>SHO</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PAS</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DRI</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>DEF</p>
+                <p>--</p>
+            </div>
+            <div class="sta">
+                <p>PHY</p>
+                <p>--</p>
+            </div>
+        </div>
+        <div class="modif">
+            <i onclick="Mymodifier(event)" class="fa fa-pencil" aria-hidden="true"></i>                    
+        </div>
+        <div class="supprime">
+            <i onclick="suprrimer(event)" class="fa fa-trash"  aria-hidden="true"></i>
+        </div>
+    </div>
+
+  </section>
+
+
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

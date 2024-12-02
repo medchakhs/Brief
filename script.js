@@ -1,4 +1,4 @@
-function namee() {
+function buttonAdd() {
 let btn = document.getElementById('form');
 btn.classList.toggle('open');
 }
@@ -9,15 +9,16 @@ function ajout(){
     if (!validation()) {
         return; 
     }
+    let lw = document.getElementsByClassName(`${select.value}`);
+    let staticPlayer = lw[0].querySelectorAll('p');
 
+    if(staticPlayer[0].textContent  == '--'){
     
-
-
-    let lw = document.getElementById(`${select.value}`);
-    let playerImage = lw.querySelector('img');
+    // let lw = document.getElementById(`${select.value}`);
+    let playerImage = lw[0].querySelector('img');
     let inputImage = document.getElementById('imge');
     playerImage.setAttribute('src',inputImage.value);
-    let staticPlayer = lw.querySelectorAll('p');
+    // let staticPlayer = lw.querySelectorAll('p');
      // goals keper
 
      let inputRating = document.getElementById('Rating');
@@ -53,6 +54,30 @@ function ajout(){
     let inputPhysical = document.getElementById('Physical');
     staticPlayer[14].textContent = inputPhysical.value;
     // console.log(staticPlayer[0]);
+    }else{
+        let playerImage = lw[1].querySelector('img');
+        let inputImage = document.getElementById('imge');
+        playerImage.setAttribute('src',inputImage.value);
+        let statistics =lw[1].querySelectorAll("p");
+        let inputRaghting = document.getElementById('raete');
+        statistics[0].textContent = inputRaghting.value;
+        let inputName = document.getElementById('name');
+        statistics[2].textContent = inputName.value;
+        let inputPace = document.getElementById('pace');
+        statistics[4].textContent = inputPace.value;
+        let inputShooting = document.getElementById('Shooting');
+        statistics[6].textContent = inputShooting.value;
+        let input = document.getElementById('Passing');
+        statistics[8].textContent = input.value;
+        let inputDribbling = document.getElementById('Dribbling');
+        statistics[10].textContent = inputDribbling.value;
+        let inputDefending = document.getElementById('Defending');
+        statistics[12].textContent = inputDefending.value;
+        let inputPhysical = document.getElementById('Physical');
+        statistics[14].textContent = inputPhysical.value;
+    }
+
+
 
     Swal.fire({
         position: "center",
@@ -69,7 +94,6 @@ function ajout(){
     }
     forme.reset();
 }
-
 
 function validation() {
     const name = document.getElementById("name").value.trim();
@@ -165,10 +189,10 @@ select.addEventListener("change", function() {
     }
 });
 
-function Mymodifier(playerId) {
+function Mymodifier(event) {
 
     let select = document.getElementById('pet-select');
-    let playerCard = document.getElementById(playerId);
+    let playerCard = event.target.parentElement.parentElement;
     select.value = playerCard.id;
     // console.log(playerCard.id);
     let playerImage = playerCard.querySelector('img');
@@ -215,14 +239,15 @@ function Mymodifier(playerId) {
     // button.setAttribute('onclick' , 'modif()');
 }
 
-function suprrimer(playerId) {
+function suprrimer(event) {
      
     let select = document.getElementById('pet-select');
-    let playerCard = document.getElementById(playerId);
+    let playerCard = event.target.parentElement.parentElement;
     select.value = playerCard.id;
     let playerImage = playerCard.querySelector('img');
-    let inputImage = document.getElementById('imge');
     playerImage.removeAttribute("src");
+    let inputImage = document.getElementById('imge');
+    
     console.log(playerImage);
     let staticPlayer = playerCard.querySelectorAll('p');
      // goals keper
@@ -269,54 +294,4 @@ function suprrimer(playerId) {
 
 
 
-// function suprrimer(playerId) {
-//     let playerCard = document.getElementById(playerId);
-//     if (playerCard) {
-//         playerCard.remove();
-//         Swal.fire({
-//             position: "center",
-//             icon: "success",
-//             title: "Joueur supprimé avec succès !",
-//             showConfirmButton: false,
-//             timer: 1500,
-//             background: "#383939",
-//             color: "white"
-//         });
-//     } else {
-//         Swal.fire({
-//             position: "center",
-//             icon: "error",
-//             title: "Impossible de trouver le joueur.",
-//             showConfirmButton: false,
-//             timer: 1500,
-//             background: "#383939",
-//             color: "white"
-//         });
-//     }
-// }
 
-
-
-
-
-// const divParent = document.getElementById("ST");
-// const divPlayer = document.createElement("div");
-// const divName = document.createElement("div");
-// const divRating = document.createElement("div");
-// const divStatistique = document.createElement("div");
-// divParent.appendChild(divPlayer);
-// divParent.appendChild(divName);
-// divParent.appendChild(divRating);
-// divParent.appendChild(divStatistique);
-
-// const img = document.createElement("img");
-// divPlayer.appendChild(img);
-// img.setAttribute('src', );//img.value dyal input photo
-
-// const rate = document.createElement("p");
-// const position = document.createElement("p");
-// divRating.appendChild(rate);
-// divRating.appendChild(position);
-
-// const pName = document.createElement("p")
-// divName.appendChild(pName)
