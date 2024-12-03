@@ -88,10 +88,10 @@ function ajout(){
         background: "#383939",
         color: "white" 
     });
-    let button = document.getElementById('button');
-    if (button.innerHTML === 'Modifier') {
-        button.innerHTML = 'Ajouter';
-    }
+    // let button = document.getElementById('button');
+    // if (button.innerHTML === 'Modifier') {
+    //     button.innerHTML = 'Ajouter';
+    // }
     forme.reset();
 }
 
@@ -188,11 +188,11 @@ select.addEventListener("change", function() {
         playerPosition.style.display = 'flex';
     }
 });
-
+let playerCard = null;
 function Mymodifier(event) {
 
     let select = document.getElementById('pet-select');
-    let playerCard = event.target.parentElement.parentElement;
+    playerCard = event.target.parentElement.parentElement;
     select.value = playerCard.id;
     // console.log(playerCard.id);
     let playerImage = playerCard.querySelector('img');
@@ -233,11 +233,78 @@ function Mymodifier(event) {
     inputPositioning.value = staticPlayer[14].textContent;
 
     let button = document.getElementById('button');
-    if (button.innerHTML === 'Ajouter') {
-        button.innerHTML = 'Modifier';
-    }
-    // button.setAttribute('onclick' , 'modif()');
+    button.textContent = 'Modifier';
+    button.setAttribute('onclick' , 'modif(event)');
+    
+    // if (button.innerHTML === 'Ajouter') {
+    //     button.innerHTML = 'Modifier';
+    // }
+    
 }
+
+function modif(event) {
+    if (!validation()) {
+        return; 
+    }
+
+
+
+    
+    // let playerCard = event.target.parentElement.parentElement;
+    
+    // console.log(playerCard.id);
+    let playerImage = playerCard.querySelector('img');
+    let inputImage = document.getElementById('imge');
+    inputImage.value = playerImage.src;
+    // joueur
+    let staticPlayer = playerCard.querySelectorAll('p');
+    let inputRaghting = document.getElementById('raete');
+    staticPlayer[0].textContent = inputRaghting.value;
+    let inputName = document.getElementById('name');
+    staticPlayer[2].textContent = inputName.value ;
+    let inputPace = document.getElementById('pace');
+    staticPlayer[4].textContent = inputPace.value;
+    let inputShooting = document.getElementById('Shooting');
+    staticPlayer[6].textContent = inputShooting.value;
+    let input = document.getElementById('Passing');
+    staticPlayer[8].textContent = input.value;
+    let inputDribbling = document.getElementById('Dribbling');
+    staticPlayer[10].textContent = inputDribbling.value;
+    let inputDefending = document.getElementById('Defending');
+    staticPlayer[12].textContent = inputDefending.value;
+    let inputPhysical = document.getElementById('Physical');
+    staticPlayer[14].textContent = inputPhysical.value;
+    // goals keeper
+    // let inputRating = document.getElementById('Rating');
+    // inputRating.value = staticPlayer[0].textContent;
+    // let inputDiving = document.getElementById('Diving');
+    // inputDiving.value = staticPlayer[4].textContent;
+    // let inputHandling = document.getElementById('handling');
+    // inputHandling.value = staticPlayer[6].textContent;
+    // let inputKicking = document.getElementById('Kicking');
+    // inputKicking.value = staticPlayer[8].textContent;
+    // let inputReflexes = document.getElementById('Reflexes');
+    // inputReflexes.value = staticPlayer[10].textContent;
+    // let inputSpeed = document.getElementById('speed');
+    // inputSpeed.value = staticPlayer[12].textContent;
+    // let inputPositioning = document.getElementById('positioning');
+    // inputPositioning.value = staticPlayer[14].textContent;
+
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Joueur ajouté avec succès !",
+        showConfirmButton: false,
+        timer: 1500,
+        background: "#383939",
+        color: "white" 
+    });
+    forme.reset();
+     let button = document.getElementById('button');
+     button.textContent = 'Ajouter';
+     button.setAttribute('onclick' , 'ajout()');
+}
+
 
 function suprrimer(event) {
      
