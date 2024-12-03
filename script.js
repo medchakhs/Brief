@@ -179,13 +179,12 @@ let playerPosition = document.getElementById("stat1");
 let JoueurPosition = document.getElementById("stat2");
 select.addEventListener("change", function() {
     if (select.value === 'GK') {
-        JoueurPosition.style.display = 'block';
-        playerPosition.style.display = 'none';
         JoueurPosition.style.display = 'flex';
+        playerPosition.style.display = 'none';
     } else {
-        playerPosition.style.display = 'block';
-        JoueurPosition.style.display = 'none';
         playerPosition.style.display = 'flex';
+        JoueurPosition.style.display = 'none';
+        
     }
 });
 let playerCard = null;
@@ -235,11 +234,6 @@ function Mymodifier(event) {
     let button = document.getElementById('button');
     button.textContent = 'Modifier';
     button.setAttribute('onclick' , 'modif(event)');
-    
-    // if (button.innerHTML === 'Ajouter') {
-    //     button.innerHTML = 'Modifier';
-    // }
-    
 }
 
 function modif(event) {
@@ -275,20 +269,20 @@ function modif(event) {
     let inputPhysical = document.getElementById('Physical');
     staticPlayer[14].textContent = inputPhysical.value;
     // goals keeper
-    // let inputRating = document.getElementById('Rating');
-    // inputRating.value = staticPlayer[0].textContent;
-    // let inputDiving = document.getElementById('Diving');
-    // inputDiving.value = staticPlayer[4].textContent;
-    // let inputHandling = document.getElementById('handling');
-    // inputHandling.value = staticPlayer[6].textContent;
-    // let inputKicking = document.getElementById('Kicking');
-    // inputKicking.value = staticPlayer[8].textContent;
-    // let inputReflexes = document.getElementById('Reflexes');
-    // inputReflexes.value = staticPlayer[10].textContent;
-    // let inputSpeed = document.getElementById('speed');
-    // inputSpeed.value = staticPlayer[12].textContent;
-    // let inputPositioning = document.getElementById('positioning');
-    // inputPositioning.value = staticPlayer[14].textContent;
+    let inputRating = document.getElementById('Rating');
+    inputRating.value = staticPlayer[0].textContent;
+    let inputDiving = document.getElementById('Diving');
+    inputDiving.value = staticPlayer[4].textContent;
+    let inputHandling = document.getElementById('handling');
+    inputHandling.value = staticPlayer[6].textContent;
+    let inputKicking = document.getElementById('Kicking');
+    inputKicking.value = staticPlayer[8].textContent;
+    let inputReflexes = document.getElementById('Reflexes');
+    inputReflexes.value = staticPlayer[10].textContent;
+    let inputSpeed = document.getElementById('speed');
+    inputSpeed.value = staticPlayer[12].textContent;
+    let inputPositioning = document.getElementById('positioning');
+    inputPositioning.value = staticPlayer[14].textContent;
 
     Swal.fire({
         position: "center",
